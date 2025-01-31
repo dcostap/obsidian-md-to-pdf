@@ -1,0 +1,12 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "md to PDF",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "python parse.py \"${file}\" && pandoc \"build/${fileBasenameNoExtension}_parsed.md\" -o \"build/${fileBasenameNoExtension}.pdf\" --pdf-engine=pdflatex --toc --number-sections --include-in-header=latex-header.tex && start \"build/${fileBasenameNoExtension}.pdf\"",
+      "suppressMultipleSessionWarning": true
+    }
+  ]
+}

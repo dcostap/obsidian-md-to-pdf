@@ -1,0 +1,137 @@
+/* -------------- Font Face ------------- */
+@font-face {
+  font-family: 'New Computer Modern';
+  src: url('fonts/NewCM10-Book.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'New Computer Modern';
+  src: url('fonts/NewCM10-BookItalic.otf') format('opentype');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'New Computer Modern';
+  src: url('fonts/NewCM10-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'New Computer Modern';
+  src: url('fonts/NewCM10-BoldItalic.otf') format('opentype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* -------------- Page / Footer ------------- */
+@page {
+  margin: 1in;
+  /* CSS footers can fail in older wkhtmltopdf builds, so be careful */
+  @bottom-center {
+    content: "Page " counter(page) " of " counter(pages);
+    font-size: 10pt;
+    font-family: 'New Computer Modern', serif;
+  }
+}
+
+/* -------------- Body ------------- */
+body {
+  font-family: 'New Computer Modern', serif;
+  font-size: 12pt;
+  line-height: 1.5;
+  text-align: justify;
+  margin: 0;
+}
+
+p {
+  text-indent: 1em;
+  margin: 0 0 1em 0;
+}
+
+/* -------------- Headings with Dot-Numbering ------------- */
+
+/* Reset counters in the body */
+body {
+  counter-reset: h1counter h2counter h3counter;
+}
+
+/* H1 */
+h1 {
+  counter-reset: h2counter;
+  counter-increment: h1counter;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+  font-size: 18pt;
+}
+h1::before {
+  content: counter(h1counter) ". ";
+}
+
+/* H2 */
+h2 {
+  counter-reset: h3counter;
+  counter-increment: h2counter;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+  font-size: 16pt;
+}
+h2::before {
+  content: counter(h1counter) "." counter(h2counter) ". ";
+}
+
+/* H3 */
+h3 {
+  counter-increment: h3counter;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+  font-size: 14pt;
+}
+h3::before {
+  content: counter(h1counter) "." counter(h2counter) "." counter(h3counter) ". ";
+}
+
+/* -------------- Table ------------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1em;
+}
+th, td {
+  border: 1px solid #000;
+  padding: 6pt;
+}
+th {
+  background-color: #f2f2f2;
+}
+
+/* -------------- TOC ------------- */
+.toc {
+  page-break-after: always;
+  margin-bottom: 1em;
+  font-size: 14pt;
+  font-weight: bold;
+}
+
+.toc ul {
+  list-style: none; 
+  padding-left: 0;
+  margin: 0;
+}
+
+.toc li {
+  margin: 0.2em 0;
+}
+
+.toc a {
+  color: black;         /* No blue color */
+  text-decoration: none; 
+}
+
+/* Optionally, underline links on hover for clarity */
+.toc a:hover {
+  text-decoration: underline;
+}
