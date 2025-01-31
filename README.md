@@ -1,7 +1,8 @@
 # Installing on Windows
 
 [Download pandoc](https://pandoc.org/installing.html)
-[Download Miktex (latex engine for )](https://miktex.org/download)
+
+[Download Miktex (latex engine I use with pandoc)](https://miktex.org/download)
 
 The command that generates latex-formatted PDF from a Obsidian markdown file is in `launch.json`
 
