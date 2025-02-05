@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "89bb1767bf00d5c8",
+        "id": "c3664463e4d66257",
         "type": "tabs",
         "children": [
           {
-            "id": "e350c1ad36061eb8",
+            "id": "be891574cca8de88",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -168,34 +168,35 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e350c1ad36061eb8",
+  "active": "be891574cca8de88",
   "lastOpenFiles": [
-    "tex2pdf.-ddd7fc3ddfc5d19c/input.toc",
-    "tex2pdf.-ddd7fc3ddfc5d19c/input.pdf",
-    "tex2pdf.-ddd7fc3ddfc5d19c/input.aux",
-    "tex2pdf.-ddd7fc3ddfc5d19c/input.log",
-    "tex2pdf.-ddd7fc3ddfc5d19c/imgs/img1.png",
-    "tex2pdf.-ddd7fc3ddfc5d19c/imgs/img2.png",
-    "tex2pdf.-ddd7fc3ddfc5d19c/imgs/img3.png",
-    "tex2pdf.-ddd7fc3ddfc5d19c/input.tex",
-    "tex2pdf.-ddd7fc3ddfc5d19c/imgs",
-    "tex2pdf.-ddd7fc3ddfc5d19c",
-    "latex-header.tex",
-    "tex2pdf.-a7f4b6095b3677aa/input.toc",
-    "tex2pdf.-a7f4b6095b3677aa/input.pdf",
-    "tex2pdf.-a7f4b6095b3677aa/input.aux",
-    "tex2pdf.-a7f4b6095b3677aa/imgs/img3.png",
-    "tex2pdf.-a7f4b6095b3677aa/imgs/img2.png",
-    "tex2pdf.-a7f4b6095b3677aa/imgs/img1.png",
-    "tex2pdf.-3f2b28ee2dfb462c/imgs/img2.png",
-    "tex2pdf.-3f2b28ee2dfb462c/imgs/img3.png",
-    "tex2pdf.-3f2b28ee2dfb462c/imgs/img1.png",
-    "tex2pdf.-298e5465d9ab115b/imgs/img2.png",
+    "tex2pdf.-53d5961e7b8cf81d/input.toc",
+    "tex2pdf.-53d5961e7b8cf81d/input.pdf",
+    "tex2pdf.-53d5961e7b8cf81d/input.aux",
+    "tex2pdf.-53d5961e7b8cf81d/input.log",
+    "tex2pdf.-53d5961e7b8cf81d/input.tex",
+    "tex2pdf.-53d5961e7b8cf81d/imgs/img3.png",
+    "tex2pdf.-53d5961e7b8cf81d/imgs/img2.png",
+    "tex2pdf.-53d5961e7b8cf81d/imgs/img1.png",
+    "tex2pdf.-53d5961e7b8cf81d/imgs",
+    "tex2pdf.-53d5961e7b8cf81d",
+    "tex2pdf.-9e018b43e760485b/input.toc",
+    "tex2pdf.-9e018b43e760485b/input.pdf",
+    "tex2pdf.-9e018b43e760485b/input.aux",
+    "tex2pdf.-9e018b43e760485b/input.log",
+    "docs/report.md",
+    "docs/report title goes here.pandoc.md",
+    "tex2pdf.-80cce954330af54b/imgs/img3.png",
+    "tex2pdf.-80cce954330af54b/imgs/img2.png",
+    "tex2pdf.-80cce954330af54b/imgs/img1.png",
+    "tex2pdf.-cba6c8768eb6a5a3/imgs/img3.png",
+    "tex2pdf.-cba6c8768eb6a5a3/imgs/img2.png",
+    "tex2pdf.-cba6c8768eb6a5a3/imgs/img1.png",
+    "tex2pdf.-bb31caa4d5b28b50/imgs/img2.png",
     "build/report_parsed_parsed.md",
     "build/report_parsed.md",
     "README.md",
     "build/launch_parsed.md",
-    "build/Dario_parsed.md",
-    "docs/report.md"
+    "build/Dario_parsed.md"
   ]
 }
