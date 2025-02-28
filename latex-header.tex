@@ -1,1 +1,21 @@
 \usepackage[margin=1in]{geometry}  % Set all margins to 1 inch
+\usepackage[utf8]{inputenc}
+\DeclareUnicodeCharacter{2082}{\textsubscript{2}}  % ₂ (subscript 2)
+\DeclareUnicodeCharacter{2248}{\ensuremath{\approx}}  % ≈ (approximately equal to)
+\DeclareUnicodeCharacter{2605}{\ensuremath{\bigstar}}  % ★ (black star)
+\usepackage[normalem]{ulem}
+\usepackage{hyperref}
+\usepackage{fontawesome5}  % For icons like \faLink
+\usepackage{graphicx}  % For \scalebox
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=blue,
+    urlcolor=blue,
+    citecolor=blue
+}
+\let\oldhref\href
+\renewcommand{\href}[2]{\oldhref{#1}{\uline{\scalebox{0.8}{\faLink}\,#2}}}
+
+% NOMBRE HEADING PREFIJADO A LA TABLA DE CONTENIDOS
+\renewcommand{\contentsname}{}

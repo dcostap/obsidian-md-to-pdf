@@ -49,49 +49,32 @@ p {
   margin: 0 0 1em 0;
 }
 
-/* -------------- Headings with Dot-Numbering ------------- */
-
-/* Reset counters in the body */
-body {
-  counter-reset: h1counter h2counter h3counter;
-}
-
-/* H1 */
+/* -------------- Headings ------------- */
+/* Remove the counter-based heading numbering */
 h1 {
-  counter-reset: h2counter;
-  counter-increment: h1counter;
   margin-top: 1em;
   margin-bottom: 0.5em;
   font-weight: bold;
   font-size: 18pt;
 }
-h1::before {
-  content: counter(h1counter) ". ";
-}
 
-/* H2 */
 h2 {
-  counter-reset: h3counter;
-  counter-increment: h2counter;
   margin-top: 1em;
   margin-bottom: 0.5em;
   font-weight: bold;
   font-size: 16pt;
 }
-h2::before {
-  content: counter(h1counter) "." counter(h2counter) ". ";
-}
 
-/* H3 */
 h3 {
-  counter-increment: h3counter;
   margin-top: 1em;
   margin-bottom: 0.5em;
   font-weight: bold;
   font-size: 14pt;
 }
-h3::before {
-  content: counter(h1counter) "." counter(h2counter) "." counter(h3counter) ". ";
+
+/* Remove the ::before content for all headings */
+h1::before, h2::before, h3::before {
+  content: none;
 }
 
 /* -------------- Table ------------- */

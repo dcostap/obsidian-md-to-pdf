@@ -1,4 +1,4 @@
-# Title: Office & Licencias
+# HEADING 1: Office & Licencias
 
 Obsidian image link syntax: 
 ![[img1.png]]
@@ -48,13 +48,20 @@ Cras ornare dolor non quam varius, a dignissim turpis malesuada. Maecenas ornare
 
 ### Sub-Heading With a Table
 
-| Name       | ID    | Office Key         |
-|------------|-------|--------------------|
-| user_a     | 123   | _fake_key_1        |
-| user_b     | 456   | VODA\_office\_2013 |
-| someone_42 | 789   | ABC\_XYZ           |
 
-This table includes underscores in cell content. Another footnote reference here[^footnote3].
+| Name   | ID  | Office Key  |
+| ------ | --- | ----------- |
+| user_a | 123 | _fake_key_1 |
+| test   | 222 | 2222        |
+
+
+| Name       | ID  | Office Key         |
+| ---------- | --- | ------------------ |
+| user_a     | 123 | _fake_key_1        |
+| user_b     | 456 | VODA\_office\_2013 |
+| someone_42 | 789 | ABC\_XYZ           |
+
+This last table includes underscores in cell content. Another footnote reference here[^footnote3].
 
 ### References to External Documents
 
