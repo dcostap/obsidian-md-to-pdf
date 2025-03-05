@@ -5,7 +5,7 @@
       "name": "md to PDF",
       "type": "node-terminal",
       "request": "launch",
-      "command": "python parse.py \"${file}\" && pandoc \"build/${fileBasenameNoExtension}_parsed.md\" -o \"build/${fileBasenameNoExtension}.pdf\" --pdf-engine=pdflatex -f markdown+hard_line_breaks --toc --number-sections --include-in-header=latex-header.tex && start \"build/${fileBasenameNoExtension}.pdf\"",
+      "command": "python parse.py \"${file}\" && pandoc \"build/${fileBasenameNoExtension}_parsed.md\" -o \"build/${fileBasenameNoExtension}.pdf\" --pdf-engine=pdflatex -f markdown+hard_line_breaks --toc --filter pandoc-crossref --number-sections --include-in-header=latex-header.tex && start \"build/${fileBasenameNoExtension}.pdf\"",
       "suppressMultipleSessionWarning": true
     }
   ]

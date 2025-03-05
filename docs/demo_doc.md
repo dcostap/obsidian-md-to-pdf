@@ -1,14 +1,14 @@
-# HEADING 1: Office & Licencias
-
-Obsidian image link syntax: 
-![[img1.png]]
+# HEADING 1: TEST
 
 ## Subsection: Paths & Underscores
 
-`U:\Informatica\VODAFONE\VARIOS\Clientes_CISCO.xlsx`
+`U:\Test\Folders\Path\VARIOS\Clientes_CISCO.xlsx`
 
-An empty link: []() here's an empty link
+An empty link: []()
 
+Normal link with alias: [Link to Google](https://www.google.com)
+
+Normal link without alias: [https://www.google.com]()
 
 ```python
 import os
@@ -33,11 +33,19 @@ Some bullet points:
 - Item A_2
 - Item A_3 (ends with an underscore_)
 
-A reference-style link: [Check this out][ref1]
+ordered list:
+1. Item 1
+2. Item 2
+3. Yet another item
+
+
 
 ## Footnotes
 
 We have a footnote here[^footnote1] to test extra syntax. Another footnote over here[^footnote2].
+
+[^footnote1]: This is the first footnote text.
+[^footnote2]: A second footnote with some extra detail.
 
 ## Another Section
 
@@ -63,26 +71,57 @@ Cras ornare dolor non quam varius, a dignissim turpis malesuada. Maecenas ornare
 
 This last table includes underscores in cell content. Another footnote reference here[^footnote3].
 
-### References to External Documents
+[^footnote3]: A third footnote referencing the table data.
 
-For configuration details, refer to [DOC_sistemas][ref2]. Also see [DOC_inventario][ref3].  
-We can also embed an image placeholder:
-![[img2.png]]
+# Images test
 
-Another image, inline: ![[img3.png]]
+## Inline image links with text contents before
 
-## A Final Section
+A small image, inline right after this text: ![[img3.png|alias text content for this image]]
+
+Don't place big or important images like this.
+
+## Image link right after text, in a newline
+
+Newline small image, this text can be its description. 
+![[img3.png|alias text content for this image]]
+
+Don't place big or important images like this.
+
+## Image links with blank newlines surrounding them
+
+LaTeX will center these images horizontally, and show the alias text below each one. LaTeX may place the images in a separate new page if they don't fit nicely. Thus, you must always refer to these images from text via refs. Since I'm using `pandoc-crossref`, the link and Figure name are generated automatically when I use the reference link syntax:
+
+Big image follows this text after two newlines. Link via reference label: [@fig:label_1]
+
+![[img1.png|big image]]{#fig:label_1}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit nulla ac augue consectetur, vitae rutrum nulla malesuada. Suspendisse nec justo vitae metus eleifend scelerisque.
+
+Now, linking to previous image again: [@fig:label_1]
+
+
+Small image follows this text after two newlines. [@fig:label_2]
+
+![[img3.png|small image]]{#fig:label_2}
+
+# A Final Section
 
 Sed at fermentum nunc. Donec vitae porttitor dui. Maecenas vel sem venenatis, luctus velit eget, congue ipsum. Phasellus iaculis libero id lacus ornare posuere. Vestibulum imperdiet nulla ut venenatis facilisis. Aliquam porttitor sem viverra mi vulputate sollicitudin. Fusce suscipit, orci id sollicitudin fermentum, orci nibh dignissim libero, id semper lorem urna quis massa.
 
 Another line referencing footnote[^footnote2]. Repeated references, just for testing.
 
-## References
+## Others
 
-[ref1]: https://example.com "Example Link"
-[ref2]: https://internal.server.com/doc_sistemas
-[ref3]: https://internal.server.com/doc_inventario
 
-[^footnote1]: This is the first footnote text.
-[^footnote2]: A second footnote with some extra detail.
-[^footnote3]: A third footnote referencing the table data.
+A quote block:
+
+> The Isle of Elanor is an open-ended role-playing game, featuring a High Fantasy theme and setting.
+> Branching Story Lines
+> Character Building
+> Factional Alignment
+> Character Progression
+> Combat Mechanics and Variety
+> Consequences
+> [The Isle of Elanor](https://www.commonwombat.com/blog)
+

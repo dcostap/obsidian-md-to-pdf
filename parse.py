@@ -9,47 +9,25 @@ def parse_markdown(input_file, output_file):
     with open(input_file, 'r', encoding='utf-8') as f:
         lines = f.readlines()
 
-    in_code_block = False
     parsed_lines = []
 
-    codeblock_pattern = re.compile(r'^\s*```')
-    italic_pattern = re.compile(r'_([^_]+)_')  # captures text between single underscores
-
     for line in lines:
-        # Toggle code block tracking
-        if codeblock_pattern.match(line):
-            in_code_block = not in_code_block
-            parsed_lines.append(line)
-            continue
+        # 1) Obsidian image links with aliases: ![[img.png|Alias]] -> ![Alias](imgs/img.png)
+        line = re.sub(r'!\[\[(.*?)\|(.*?)\]\]', r'![\2](imgs/\1)', line)
+        
+        # 2) Regular Obsidian image links: ![[img.png]] -> ![img.png](imgs/img.png)
+        line = re.sub(r'!\[\[(.*?)\]\]', r'![\1](imgs/\1)', line)
 
-        if not in_code_block:
-            # Insert a blank line before an Obsidian image link if the previous line isn't blank
-            if re.search(r'!\[\[.*?\]\]', line) and parsed_lines and parsed_lines[-1].strip() != "":
-                parsed_lines.append('\n')
-
-            # 1) Obsidian image links: ![[img.png]] -> ![img.png](imgs/img.png)
-            line = re.sub(r'!\[\[(.*?)\]\]', r'![\1](imgs/\1)', line)
-
-            # 2) Wiki links: [[link]] -> [link](imgs/link)
-            line = re.sub(r'\[\[(.*?)\]\]', r'[\1](imgs/\1)', line)
-
-            # 3) Remove empty links
-            line = re.sub(r'\[\]\(\)', '', line)
-
-            # 4) Escape backslashes
-            line = line.replace('\\', '\\\\')
-
-            # 5) Convert italics `_text_` -> `*text*`
-            line = italic_pattern.sub(r'*\1*', line)
-
-            # 6) Escape leftover underscores
-            line = line.replace('_', r'\_')
+        # 3) Wiki links with aliases: [[link|Alias]] -> [Alias](imgs/link)
+        line = re.sub(r'\[\[(.*?)\|(.*?)\]\]', r'[\2](imgs/\1)', line)
+        
+        # 4) Regular Wiki links: [[link]] -> [link](imgs/link)
+        line = re.sub(r'\[\[(.*?)\]\]', r'[\1](imgs/\1)', line)
 
         parsed_lines.append(line)
 
     with open(output_file, 'w', encoding='utf-8') as f:
         f.writelines(parsed_lines)
-
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:

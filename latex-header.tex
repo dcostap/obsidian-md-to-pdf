@@ -7,6 +7,12 @@
 \usepackage{hyperref}
 \usepackage{fontawesome5}  % For icons like \faLink
 \usepackage{graphicx}  % For \scalebox
+\usepackage{mdframed}  % For fancy quote boxes
+\usepackage{xcolor}    % For text coloring
+\usepackage{quoting}   % Better quote environment
+\usepackage{fancyvrb}  % For verbatim text/code blocks
+\usepackage{listings}  % For code blocks
+
 \hypersetup{
     colorlinks=true,
     linkcolor=blue,
@@ -19,3 +25,40 @@
 
 % NOMBRE HEADING PREFIJADO A LA TABLA DE CONTENIDOS
 \renewcommand{\contentsname}{}
+
+% Define a clean quote style with just a large quote mark
+\definecolor{quotemarkcolor}{rgb}{0.4,0.4,0.4}
+
+% Markdown quotes are rendered as an indented block with a large quote character
+\renewenvironment{quote}{%
+  \begin{list}{}{%
+    \setlength{\leftmargin}{3em}%
+    \setlength{\rightmargin}{1em}%
+    \setlength{\itemindent}{0em}%
+    \setlength{\parindent}{0em}%
+    \setlength{\parsep}{0em}%
+  }%
+  \item\relax\small\itshape\hspace{-0.7em}%
+  \makebox[0pt][r]{\raisebox{-0.7em}{\scalebox{4}{\textcolor{quotemarkcolor}{\textquotedblleft}}}\hspace{0.7em}}%
+}{%
+  \end{list}%
+}
+
+% Set code block indentation
+\definecolor{codecolor}{rgb}{0.95,0.95,0.95}
+\fvset{
+  xleftmargin=1.8em,    % Left margin
+  fontsize=\small,      % Font size
+  baselinestretch=1,    % Line spacing
+%   frame=single          % Add a frame around code blocks
+}
+
+% For listings package
+\lstset{
+  xleftmargin=1.5em,    % Left margin
+  basicstyle=\small\ttfamily,
+  backgroundcolor=\color{codecolor},
+  frame=single,         % Add a frame
+  breaklines=true,      % Enable line breaks
+  postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space}
+}
