@@ -29,9 +29,10 @@ _ITALICS TEXT_
 these _words_ _are_ _in_ _italics_
 
 Some bullet points:
+
 - Item A_1
 - Item A_2
-- Item A_3 (ends with an underscore_)
+- Item A_3 (ends with an underscore)
 
 ordered list:
 1. Item 1
@@ -77,14 +78,14 @@ This last table includes underscores in cell content. Another footnote reference
 
 ## Inline image links with text contents before
 
-A small image, inline right after this text: ![[img3.png|alias text content for this image]]
+A small image, inline right after this text: ![alias text content for this image](imgs/img3.png)
 
 Don't place big or important images like this.
 
 ## Image link right after text, in a newline
 
 Newline small image, this text can be its description. 
-![[img3.png|alias text content for this image]]
+![alias text content for this image](imgs/img3.png)
 
 Don't place big or important images like this.
 
@@ -94,7 +95,7 @@ LaTeX will center these images horizontally, and show the alias text below each 
 
 Big image follows this text after two newlines. Link via reference label: [@fig:label_1]
 
-![[img1.png|big image]]{#fig:label_1}
+![big image](imgs/img1.png){#fig:label_1}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit nulla ac augue consectetur, vitae rutrum nulla malesuada. Suspendisse nec justo vitae metus eleifend scelerisque.
 
@@ -103,7 +104,7 @@ Now, linking to previous image again: [@fig:label_1]
 
 Small image follows this text after two newlines. [@fig:label_2]
 
-![[img3.png|small image]]{#fig:label_2}
+![small image](imgs/img3.png){#fig:label_2}
 
 # A Final Section
 
