@@ -1,4 +1,4 @@
-# Opinionated Markdown to PDF converter using Pandoc
+# Custom Markdown-to-PDF setup using Pandoc
 
 It uses slightly modified formatting and styling.
 
